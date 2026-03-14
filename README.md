@@ -14,3 +14,12 @@ Dimension Tables: Prefixed or identified with dim_ (e.g., dim_customers).
 
 Fact Tables: Prefixed or identified with fact_ (e.g., fact_transactions).
 
+### Prerequisites
+Before cloning, ensure you have **Git LFS** installed on your system:
+* **Mac:** `brew install git-lfs`
+* **Windows:** Download from [git-lfs.com](https://git-lfs.com)
+* **Linux:** `sudo apt-get install git-lfs`
+
+After installing, run:
+```bash
+git lfs install
