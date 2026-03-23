@@ -1,0 +1,3 @@
+Chris:
+1. I'm not super sure about how well I've cleaned the dates, I'll come back to it eventually
+2. We need to find a way to ingest the big file faster as it takes so long!
