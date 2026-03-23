@@ -25,3 +25,13 @@ conn.close()
 conn = get_conn(DATABASE)
 print(f"Connected to '{DATABASE}' successfully ✅")
 conn.close()
+
+# Method to be call
+def get_conn(database=DATABASE):
+    return pyodbc.connect(
+        f"DRIVER={{{DRIVER}}};"
+        f"SERVER={SERVER_NAME};"
+        f"DATABASE={database};"
+        f"Trusted_Connection=yes;"
+        , autocommit=True
+    )

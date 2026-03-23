@@ -1,10 +1,19 @@
+import sys
+import os
+import csv
 import pyodbc
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from config import SERVER_NAME, DATABASE, DRIVER
 
 # Connecting to the Databse
-#!!!!!!!!! Leaving this part for Christophe
-# Necessary variables:
-conn = None
-cursor = None
+conn = pyodbc.connect(
+        f"DRIVER={{{DRIVER}}};"
+        f"SERVER={SERVER_NAME};"
+        f"DATABASE={DATABASE};"
+        f"Trusted_Connection=yes;"
+        ,autocommit=True
+    )
+cursor = conn.cursor()
 
 # Creating the Schema
 cursor.execute("CREATE SCHEMA ingestion")
